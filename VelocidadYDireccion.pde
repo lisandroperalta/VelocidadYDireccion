@@ -9,6 +9,7 @@ void draw () {
   background (0);
 
   miVelocidadYDireccion.calcularTodo (mouseX, mouseY);
+  
   miVelocidadYDireccion.mostrarData ();
 
 

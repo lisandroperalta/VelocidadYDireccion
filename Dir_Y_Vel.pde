@@ -18,13 +18,16 @@ class Dir_y_Vel {
     prevPosY=posY;
     posX=mi_X;
     posY=mi_Y;
+
     miDireccionX = posX-prevPosX;
     miDireccionY = posY-prevPosY;
     miDireccionPolar = degrees(atan2( posY-prevPosY, posX-prevPosX ));
+
     vel = dist (posX, posY, prevPosX, prevPosY);
   }
 
 
+//////* ESTOS SON LOS METODOS QUE DEVUELVEN ALGO *///////
 
   float velocidad() {
     return vel;
@@ -42,13 +45,16 @@ class Dir_y_Vel {
   float direccionPolar () {
     return miDireccionPolar;
   }
+  
+  
+//////* ESTO ES PARA DEBBUGGEAR LO QUE SE ESTA VIENDO *///////
 
   void mostrarData() { 
-    textSize(32);
+    textSize(24);
     text ("Velocidad: "+vel, 50, 50);
-    text ("Direccion X: "+miDireccionX, 50, 100);
-    text ("Direccion Y: "+miDireccionY, 50, 150);
-    text ("Direccion Polar: "+miDireccionPolar, 50, 200);
+    text ("Direccion X: "+miDireccionX, 50, 75);
+    text ("Direccion Y: "+miDireccionY, 50, 100);
+    text ("Direccion Polar: "+miDireccionPolar, 50, 125);
 
     pushMatrix();
     pushStyle();
