@@ -8,7 +8,8 @@ void setup () {
 void draw () {
   background (0);
 
-  miVelocidadYDireccion.calcular(mouseX, mouseY);
+  miVelocidadYDireccion.calcularTodo (mouseX, mouseY);
+  miVelocidadYDireccion.mostrarData ();
 
-  miVelocidadYDireccion.mostrarData();
+
 }
