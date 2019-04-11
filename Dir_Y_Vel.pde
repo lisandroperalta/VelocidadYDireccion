@@ -5,9 +5,8 @@ class Dir_y_Vel {
   float prevPosY;
   float miDireccionX;
   float miDireccionY;
-
-
   float vel;
+  float miDireccionPolar;
 
   Dir_y_Vel () {
     this.posX=0;
@@ -19,11 +18,10 @@ class Dir_y_Vel {
     prevPosY=posY;
     posX=mi_X;
     posY=mi_Y;
-    
-    vel = dist (posX, posY, prevPosX, prevPosY);
-   
     miDireccionX = posX-prevPosX;
     miDireccionY = posY-prevPosY;
+    miDireccionPolar = degrees(atan2( posY-prevPosY, posX-prevPosX ));
+    vel = dist (posX, posY, prevPosX, prevPosY);
   }
 
 
@@ -41,11 +39,30 @@ class Dir_y_Vel {
   }
 
 
+  float direccionPolar () {
+    return miDireccionPolar;
+  }
+
   void mostrarData() { 
     textSize(32);
     text ("Velocidad: "+vel, 50, 50);
-    text ("DireccionX: "+miDireccionX, 50, 100);
-    text ("direccionY: "+miDireccionY, 50, 150);
+    text ("Direccion X: "+miDireccionX, 50, 100);
+    text ("Direccion Y: "+miDireccionY, 50, 150);
+    text ("Direccion Polar: "+miDireccionPolar, 50, 200);
+
+    pushMatrix();
+    pushStyle();
+    noFill();
+    stroke(255);
+    strokeWeight(3);
+    translate (width/2, height/2);
+
+    ellipse (0, 0, 100, 100);
+    rotate (radians(miDireccionPolar));
+    line (0, 0, vel*2, 0);
+
+    popMatrix();
+    popStyle();
   }  
 
   ///////////// FIN DE LA CLASE  ///////
