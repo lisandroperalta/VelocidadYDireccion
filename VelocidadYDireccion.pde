@@ -1,16 +1,14 @@
-float posX=0;
-float posY=0;
-
+Dir_y_Vel miVelocidadYDireccion;
 
 void setup () {
   size (800, 600);
+  miVelocidadYDireccion = new Dir_y_Vel();
 }
 
 void draw () {
-  posX=mouseX;
-  posY=mouseY;
-  
   background (0);
 
-  text (velocidad, mouseX, mouseY);
+  miVelocidadYDireccion.calcular(mouseX, mouseY);
+
+  miVelocidadYDireccion.mostrarData();
 }
