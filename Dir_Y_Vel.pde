@@ -19,7 +19,9 @@ class Dir_y_Vel {
     prevPosY=posY;
     posX=mi_X;
     posY=mi_Y;
+    
     vel = dist (posX, posY, prevPosX, prevPosY);
+   
     miDireccionX = posX-prevPosX;
     miDireccionY = posY-prevPosY;
   }
