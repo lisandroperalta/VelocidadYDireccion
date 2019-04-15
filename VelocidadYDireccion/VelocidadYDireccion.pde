@@ -34,6 +34,6 @@ void draw () {
   popStyle();
 
 
-  //Esta es una funcion solo para debuggear y ver en pantalla si esta funcionando todo ok
+  //Esta es una funcion solo para ver en pantalla si esta funcionando todo ok
   miVelocidadYDireccion.mostrarData ();
 }
