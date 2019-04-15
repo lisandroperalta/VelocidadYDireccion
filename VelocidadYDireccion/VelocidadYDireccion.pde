@@ -24,13 +24,16 @@ void draw () {
 
   //Por ejemplo:
   pushStyle();
+
   float hue = miVelocidadYDireccion.direccionPolar();
   float satYBright=miVelocidadYDireccion.velocidad()*4;
+
   colorMode (HSB);
   color miColor = color (hue, satYBright, satYBright);
   fill (miColor);
-
+  
   rect(0, 0, width, height);
+
   popStyle();
 
 
