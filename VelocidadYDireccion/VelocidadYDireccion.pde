@@ -10,7 +10,7 @@ void setup () {
 void draw () {
   background (0);
 
-  //Lo priemero que deberia hacer es pasarle los parametros x e y que quiero calcular, en este caso el mouse
+  //Lo primero que deberia hacer es pasarle los parametros x e y que quiero calcular, en este caso el mouse
   miVelocidadYDireccion.calcularTodo (mouseX, mouseY);
 
 
